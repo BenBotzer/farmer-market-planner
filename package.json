@@ -1,0 +1,12 @@
+{
+  "name": "market-planner",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-static.mjs",
+    "preview": "python -m http.server 4173 -d dist",
+    "test": "node --test",
+    "serve": "python -m http.server 5173"
+  }
+}
