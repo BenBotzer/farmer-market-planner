@@ -6,6 +6,8 @@ The app is built around a simple assumption: all sellers have the same quality, 
 
 ## How It Works
 
+A sample is presented when opening the app to present how it works.
+
 Add the price lists from the sellers at your farmers market. You can paste the list as text, or upload a text, CSV, or PDF file.
 
 Farmers Market Planner parses the lists and creates a comparison table with the items it finds. Items are organized by name, and each row shows the prices offered by the different sellers for that item.
