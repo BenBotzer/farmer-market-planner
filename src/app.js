@@ -209,7 +209,7 @@ function render(options = {}) {
           </svg>
         </div>
         <div>
-          <h1>Market Planner</h1>
+          <h1>Farmers Market Planner</h1>
           <p>Compare seller price lists and build the cheapest Friday market plan.</p>
         </div>
       </div>
