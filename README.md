@@ -1,4 +1,4 @@
-# Market Planner
+# Farmers Market Planner
 
 Market Planner helps you decide where to buy each item at your local farmers market.
 
