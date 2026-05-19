@@ -1,18 +1,42 @@
 # Market Planner
 
-Market Planner compares farmers market seller price lists and produces a shopping plan for the cheapest stand per item, assuming quality is the same everywhere.
+Market Planner helps you decide where to buy each item at your local farmers market.
 
-## Use it
+The app is built around a simple assumption: all sellers have the same quality, and the distance between stands is negligible. With that assumption, the best plan is usually the one that gets each item from the seller with the best price, while still letting you choose a different seller when you prefer.
 
-Open `index.html` in a browser, or serve the folder locally:
+## How It Works
+
+Add the price lists from the sellers at your farmers market. You can paste the list as text, or upload a text, CSV, or PDF file.
+
+Market Planner parses the lists and creates a comparison table with the items it finds. Items are organized by name, and each row shows the prices offered by the different sellers for that item.
+
+Next to the table, the shopping plan summarizes the items you select. The plan is split by vendor, so you can see which stand to visit and what to buy there.
+
+When you are done planning, you can copy the shopping plan as plain text and paste it wherever you want.
+
+## Current Limitations
+
+The parser is best-effort. It can handle many common price-list formats, including sale bundles, but it may not parse everything correctly. You should review the table before using the final plan.
+
+PDF extraction works only when the PDF exposes readable text. Scanned PDFs, photos, and some custom encoded PDFs may not work.
+
+## Run Locally
+
+Install dependencies:
 
 ```powershell
-python -m http.server 5173
+npm install
+```
+
+Run the app:
+
+```powershell
+npm run serve
 ```
 
 Then visit `http://localhost:5173`.
 
-## Run it online
+## Build for Hosting
 
 Market Planner is a static browser app, so it can run on any static host. No server, database, or API key is required.
 
@@ -24,7 +48,16 @@ npm run build
 
 The generated `dist` folder can be uploaded to Netlify, Vercel, Cloudflare Pages, GitHub Pages, or any static web host.
 
-### GitHub Pages
+## Preview the Production Build Locally
+
+```powershell
+npm run build
+npm run preview
+```
+
+Then visit `http://localhost:4173`.
+
+## GitHub Pages
 
 This project includes `.github/workflows/deploy-pages.yml`. To publish with GitHub Pages:
 
@@ -35,32 +68,4 @@ This project includes `.github/workflows/deploy-pages.yml`. To publish with GitH
 
 GitHub will publish the contents of `dist`.
 
-### Preview the production build locally
-
-```powershell
-npm run build
-npm run preview
-```
-
-Then visit `http://localhost:4173`.
-
-## What works now
-
-- Add/remove sellers.
-- Paste price lists or import `.txt` / `.csv` / WhatsApp text export files.
-- Extract text from many text-based PDFs directly in the browser.
-- Parse common formats such as `Tomatoes 12 / kg`, `Cucumbers 2 for 10`, `Basil ₪4.50 bunch`, and `Apples 500g 6`.
-- Normalize common item names and units.
-- Compare unit prices and group the recommended shopping plan by seller.
-- Copy the cart as text.
-- Save the current comparison in browser local storage.
-
-## PDF inputs
-
-PDF files are handled with a best-effort browser extractor. This works for many text-based PDFs, but scanned PDFs and some custom encoded Hebrew font PDFs may not expose readable text. Photo/image inputs are not supported right now.
-
-Good options:
-
-- Local-only: PDF text extraction plus pasted seller text.
-- Cloud/AI-assisted: send each seller file to a vision-capable model and ask for structured `{ item, price, quantity, unit }` rows.
-- Hybrid: use local PDF text extraction when possible, fall back to OCR/AI for scans and photos later if needed.
+Note: GitHub Pages for private repositories depends on your GitHub plan.
