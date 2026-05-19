@@ -59,13 +59,4 @@ Then visit `http://localhost:4173`.
 
 ## GitHub Pages
 
-This project includes `.github/workflows/deploy-pages.yml`. To publish with GitHub Pages:
-
-1. Push the project to a GitHub repository on the `main` branch.
-2. In the repository settings, open **Pages**.
-3. Set the source to **GitHub Actions**.
-4. Push again, or run the **Deploy Market Planner** workflow manually.
-
-GitHub will publish the contents of `dist`.
-
-Note: GitHub Pages for private repositories depends on your GitHub plan.
+Link to open it in your browser: https://benbotzer.github.io/farmer-market-planner/
