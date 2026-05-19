@@ -1,6 +1,6 @@
 # Farmers Market Planner
 
-Market Planner helps you decide where to buy each item at your local farmers market.
+Farmers Market Planner helps you decide where to buy each item at your local farmers market.
 
 The app is built around a simple assumption: all sellers have the same quality, and the distance between stands is negligible. With that assumption, the best plan is usually the one that gets each item from the seller with the best price, while still letting you choose a different seller when you prefer.
 
@@ -8,7 +8,7 @@ The app is built around a simple assumption: all sellers have the same quality, 
 
 Add the price lists from the sellers at your farmers market. You can paste the list as text, or upload a text, CSV, or PDF file.
 
-Market Planner parses the lists and creates a comparison table with the items it finds. Items are organized by name, and each row shows the prices offered by the different sellers for that item.
+Farmers Market Planner parses the lists and creates a comparison table with the items it finds. Items are organized by name, and each row shows the prices offered by the different sellers for that item.
 
 Next to the table, the shopping plan summarizes the items you select. The plan is split by vendor, so you can see which stand to visit and what to buy there.
 
@@ -38,7 +38,7 @@ Then visit `http://localhost:5173`.
 
 ## Build for Hosting
 
-Market Planner is a static browser app, so it can run on any static host. No server, database, or API key is required.
+Farmers Market Planner is a static browser app, so it can run on any static host. No server, database, or API key is required.
 
 Build the deployable files:
 
@@ -60,3 +60,14 @@ Then visit `http://localhost:4173`.
 ## GitHub Pages
 
 Link to open it in your browser: https://benbotzer.github.io/farmer-market-planner/
+
+This project includes `.github/workflows/deploy-pages.yml`. To publish with GitHub Pages:
+
+1. Push the project to a GitHub repository on the `main` branch.
+2. In the repository settings, open **Pages**.
+3. Set the source to **GitHub Actions**.
+4. Push again, or run the **Deploy Farmers Market Planner** workflow manually.
+
+GitHub will publish the contents of `dist`.
+
+Note: GitHub Pages for private repositories depends on your GitHub plan.

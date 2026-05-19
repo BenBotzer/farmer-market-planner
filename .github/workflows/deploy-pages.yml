@@ -1,4 +1,4 @@
-name: Deploy Market Planner
+name: Deploy Farmers Market Planner
 
 on:
   push:

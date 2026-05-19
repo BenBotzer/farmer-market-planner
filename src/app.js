@@ -7,8 +7,8 @@ import {
   getSampleSellers,
   looksLikeWhatsAppText,
   parsePriceList,
-} from "./market.js?v=ui-refresh-6";
-import { extractTextFromPdfFile } from "./extractors.js?v=ui-refresh-6";
+} from "./market.js?v=farmers-title-1";
+import { extractTextFromPdfFile } from "./extractors.js?v=farmers-title-1";
 
 const storageKey = "market-scout-state-v1";
 
@@ -213,7 +213,7 @@ function render(options = {}) {
           <p>Compare seller price lists and build the cheapest Friday market plan.</p>
         </div>
       </div>
-      <div class="top-metrics" aria-label="Market Planner summary">
+      <div class="top-metrics" aria-label="Farmers Market Planner summary">
         <div>
           <span>Sellers</span>
           <strong>${state.sellers.length}</strong>
@@ -946,11 +946,11 @@ function getPlanText() {
   const plan = buildShoppingPlan(comparisons.map(withSelectedOffer).filter((comparison) => selectedKeys.has(comparison.key)));
 
   if (!plan.length) {
-    return [`Market Planner cart for ${state.marketDate}`, "", "No selected items yet."].join("\n");
+    return [`Farmers Market Planner cart for ${state.marketDate}`, "", "No selected items yet."].join("\n");
   }
 
   const lines = [
-    `Market Planner cart for ${state.marketDate}`,
+    `Farmers Market Planner cart for ${state.marketDate}`,
     "",
     ...plan.flatMap((seller) => [
       seller.sellerName,
